@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<script defer src="index.js"></script><script defer src="htmlManipulation.js"></script></head>
+<script defer src="htmlManipulation.js"></script><script defer src="index.js"></script></head>
 <body>
     <div id="sidebar">
         <div id="account-info">
@@ -14,22 +14,40 @@
         </div>
         <div id="sidebar-main">
             <div class="sidebar-main-sec sec1">
-                <div class="bars" id="home"></div>
-                <div class="bars" id="myDay"></div>
-                <div class="bars" id="favourites"></div>
+                <div class="bars" id="home">
+                    <img src="imgs/home.svg" alt="home icon">
+                    <span>Home</span>
+                </div>
+                <div class="bars" id="myDay">
+                    <img src="imgs/day.svg" alt="day icon">
+                    <span>Today</span>
+                </div>
+                <div class="bars" id="favourites">
+                    <img src="imgs/star.svg" alt="favourites icon">
+                    <span>Favourite</span>
+                </div>
             </div>
             <div class="sidebar-main-sec sec2">
                 <div class="bars" id="projects">
-                    <span>Projects</span>
                     <img src="imgs/project.svg" alt="project icon">
+                    <span>Projects</span>
+                    <div class="addImg">
+                        <img src="imgs/add.svg" alt="addition icon">
+                    </div>
                 </div>
                 <div class="bars" id="notes">
-                    <span>Notes</span>
                     <img src="imgs/note.svg" alt="Notes icon">
+                    <span>Notes</span>
+                    <div class="addImg">
+                        <img src="imgs/add.svg" alt="addition icon">
+                    </div>
                 </div>
                 <div class="bars" id="check-list">
-                    <span>Check list</span>
                     <img src="imgs/list-checks.svg" alt="check-list icon">
+                    <span>Check list</span>
+                    <div class="addImg">
+                        <img src="imgs/add.svg" alt="addition icon">
+                    </div>
                 </div>
             </div>
         </div>
