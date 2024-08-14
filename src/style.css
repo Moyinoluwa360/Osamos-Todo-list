@@ -59,7 +59,9 @@ img{
     background-color: rgb(176, 248, 186);
     border-radius: 15px;
     margin: 20px;
+    margin-bottom: 10px;
     gap: 10px;
+    height:15%;
 }
 .account-details{
     display: flex;
@@ -84,8 +86,39 @@ img{
     justify-content: space-around;
     border-radius: 15px;
     margin: 20px;
-    height: 20%;
     background-color: rgb(196, 212, 255);
     padding-left: 20px;
     padding-right: 20px;
+}
+.sec1{
+    height: 20%;
+}
+.sec2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+.hiddenContent{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(233, 233, 233);
+    display: none;
+}
+.bar-container{
+    display: flex;
+    flex-direction: column;
+}
+.addImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.addImg img:hover{
+    height: 27px;
+    width: 27px;
+    box-shadow: 2px 2px 2px black;
 }
