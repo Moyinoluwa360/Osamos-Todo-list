@@ -1,6 +1,6 @@
 import addImg from "../icons/add.svg"
-import editImg from "./icons/edit.svg"
-import trashImg from "./icons/trash.svg"
+import editImg from "../icons/edit.svg"
+import deleteImg from "../icons/trash.svg"
 
 export default function createTodoComponent(){
     const todosDiv = document.createElement("div")
@@ -13,7 +13,7 @@ export default function createTodoComponent(){
     //
     // event listener for the the image
     addItemImg.addEventListener("click",()=>{
-        createDialog()
+        todosDiv.appendChild(createItems("sandra"))
     })
     const addItemText = document.createElement("span")
     addItemText.textContent = "Add Item"
@@ -29,16 +29,41 @@ export default function createTodoComponent(){
 function createItems(title){
     const itemsDiv = document.createElement("div")
     itemsDiv.classList.add("items-div")
-    // check box
-    const checkBox = document.createElement("input")
-    checkBox.type = "check"
-    
+    //
     const itemTitle = document.createElement("span")
     itemTitle.textContent = title
     const itemPropsDiv = document.createElement("div")
     itemPropsDiv.classList.add("itemsPropsDiv")
-    itemPropsDiv.textContent = "fdfghjk;l"
+    // itemspropsDiv properties
+    // details button
+    const itemPropsBotton = document.createElement("button")
+    itemPropsBotton.classList.add("item-props-button")
+    itemPropsBotton.textContent = "Details"
+    itemPropsDiv.appendChild(itemPropsBotton)
+    // edit icon
+    const itemPropsEditIcon = document.createElement("img")
+    itemPropsEditIcon.setAttribute("src",editImg)
+    itemPropsDiv.appendChild(itemPropsEditIcon)
+    // delete icon
+    const itemPropsDeleteIcon = document.createElement("img")
+    itemPropsDeleteIcon.setAttribute("src", deleteImg)
+    itemPropsDiv.appendChild(itemPropsDeleteIcon)
+
+
+    // check box
+    const checkBox = document.createElement("input")
+    checkBox.classList.add("item-checkbox")
+    checkBox.type = "checkbox"
+    // event for check box
+    checkBox.addEventListener("click",()=>{
+        if (checkBox.checked){
+            itemTitle.style.textDecoration = "line-through"
+        }else{
+            itemTitle.style.textDecoration = "none"
+        }
+    })
     //
+    itemsDiv.appendChild(checkBox)
     itemsDiv.appendChild(itemTitle)
     itemsDiv.appendChild(itemPropsDiv)
     return itemsDiv
