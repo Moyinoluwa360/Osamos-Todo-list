@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body{\n    margin: 0%;\n    padding: 0%;\n}\n.container{\n    width: 100%;\n    height: 100vh;\n    display: flex;\n\n}\n#sidebar{\n    flex-basis: 25%;\n}\n#main-page{\n    flex-basis: 75%;\n}\n/* resizing images */\n#account-info img{\n    height: 80px;\n    width: 80px;\n}\nimg{\n    height: 35px;\n    width: 35px;\n}\n.addImg img{\n    height: 25px;\n    width: 25px;\n}\n\n#sidebar{\n    display: flex;\n    flex-direction: column;\n}\n\n/*bars */\n.bars{\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    padding: 5px;\n    justify-content: flex-start;\n    font-size: 18px;\n    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    font-style: oblique;\n}\n.bars:hover{\n    background-color:rgb(159, 185, 255);\n    margin: 5px;\n    border-radius: 10px;\n}\n\n\n/* account details section */\n#account-info{\n    display: flex;\n    justify-content:flex-start;\n    align-items: center;\n    background-color: rgb(176, 248, 186);\n    border-radius: 15px;\n    margin: 20px;\n    margin-bottom: 10px;\n    gap: 10px;\n}\n.account-details{\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n}\n.account-details span:first-child{\n    font-style: italic;\n    font-family: cursive;\n    font-size: 25px;\n    font-weight: bolder;\n}\n.account-details span:last-child{\n    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\n    font-weight: lighter;   \n}\n\n/* sidebar Main */\n.sidebar-main-sec{\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    border-radius: 15px;\n    margin: 20px;\n    background-color: rgb(196, 212, 255);\n    padding-left: 20px;\n    padding-right: 20px;\n}\n.sec1{\n    height: 20%;\n}\n.sec2{\n    padding-top: 20px;\n    padding-bottom: 20px;\n    gap: 10px;\n}\n.hiddenContent{\n    display: flex;\n    flex-direction: column;\n    padding: 10px;\n    background-color: rgb(233, 233, 233);\n    display: none;\n}\n.bar-container{\n    display: flex;\n    flex-direction: column;\n}\n.addImg{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 5px;\n    font-size: 15px;\n    font-weight: bolder;\n}\n.addImg img:hover{\n    height: 27px;\n    width: 27px;\n    box-shadow: 2px 2px 2px black;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://osamos-todo-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body{\n    margin: 0%;\n    padding: 0%;\n}\n.container{\n    width: 100%;\n    height: 100vh;\n    display: flex;\n\n}\n#sidebar{\n    flex-basis: 25%;\n}\n#main-page{\n    flex-basis: 75%;\n}\n/* resizing images */\n#account-info img{\n    height: 80px;\n    width: 80px;\n}\nimg{\n    height: 35px;\n    width: 35px;\n}\n.addImg img{\n    height: 25px;\n    width: 25px;\n}\n\n#sidebar{\n    display: flex;\n    flex-direction: column;\n}\n\n/*bars */\n.bars{\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    padding: 5px;\n    justify-content: flex-start;\n    font-size: 18px;\n    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    font-style: oblique;\n}\n.bars:hover{\n    background-color:rgb(159, 185, 255);\n    margin: 5px;\n    border-radius: 10px;\n}\n\n\n/* account details section */\n#account-info{\n    display: flex;\n    justify-content:flex-start;\n    align-items: center;\n    background-color: rgb(176, 248, 186);\n    border-radius: 15px;\n    margin: 20px;\n    margin-bottom: 10px;\n    gap: 10px;\n    height:15%;\n}\n.account-details{\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n}\n.account-details span:first-child{\n    font-style: italic;\n    font-family: cursive;\n    font-size: 25px;\n    font-weight: bolder;\n}\n.account-details span:last-child{\n    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\n    font-weight: lighter;   \n}\n\n/* sidebar Main */\n.sidebar-main-sec{\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    border-radius: 15px;\n    margin: 20px;\n    background-color: rgb(196, 212, 255);\n    padding-left: 20px;\n    padding-right: 20px;\n}\n.sec1{\n    height: 20%;\n}\n.sec2{\n    padding-top: 20px;\n    padding-bottom: 20px;\n    gap: 10px;\n}\n.hiddenContent{\n    display: flex;\n    flex-direction: column;\n    padding: 10px;\n    background-color: rgb(233, 233, 233);\n    display: none;\n}\n.bar-container{\n    display: flex;\n    flex-direction: column;\n}\n.addImg{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 5px;\n    font-size: 15px;\n    font-weight: bolder;\n}\n.addImg img:hover{\n    height: 27px;\n    width: 27px;\n    box-shadow: 2px 2px 2px black;\n}\n/* main page header */\n#main-page{\n    display: flex;\n    flex-direction: column;\n    margin: 20px;\n    height: 95%;\n}\n.main-page-header{\n    height: 10%;\n    background-color: rgb(214, 236, 255);\n    text-shadow: 2px 2px 2px black;\n    margin-bottom: 10px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    border-radius: 10px;\n    font-size: 40px;\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n}\n.main-page-content{\n    margin: 0%;\n    height: 85%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    border-radius: 10px;\n    border: 1px solid black;\n}\n.todos-displayed{\n    height: 95%;\n    background-color: aqua;\n    display: flex;\n    flex-direction: column;\n}\n\n/* js components styling */\n\n.addItemDiv{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 5px;\n    height: 6%;\n    font-weight: bolder;\n}\n\n.addItemDiv img:hover{\n    height: 40px;\n    width: 40px;\n    border-radius: 50%;\n    box-shadow: 2px 2px 2px rgb(160, 255, 168);\n}\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://osamos-todo-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,7 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\nconst makeCollasible = (function(){\n    const specialBar = document.querySelectorAll(\".special-bar\")\n    for ( let i = 0; i < specialBar.length; i++) {\n        specialBar[i].addEventListener(\"click\", function() {\n            this.classList.toggle(\"active\");\n            let content = this.nextElementSibling;\n            if (content.style.display === \"block\") {\n                content.style.display = \"none\";\n            } else {\n                content.style.display = \"block\";\n            }\n        });\n      } \n})()\n\n\n\n//# sourceURL=webpack://osamos-todo-list/./src/htmlManipulation.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _page_component_todoComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./page component/todoComponent */ \"./src/page component/todoComponent.js\");\n\n\nconst makeCollasible = (function(){\n    const specialBar = document.querySelectorAll(\".special-bar\")\n    for ( let i = 0; i < specialBar.length; i++) {\n        specialBar[i].addEventListener(\"click\", function() {\n            this.classList.toggle(\"active\");\n            let content = this.nextElementSibling;\n            if (content.style.display === \"block\") {\n                content.style.display = \"none\";\n            } else {\n                content.style.display = \"block\";\n            }\n        });\n      } \n})()\n\nfunction renderComponent(element){\n    const todosDisplayed = document.querySelector(\".todos-displayed\") \n    todosDisplayed.appendChild(element)\n}\n\nrenderComponent((0,_page_component_todoComponent__WEBPACK_IMPORTED_MODULE_1__[\"default\"])())\n\n//# sourceURL=webpack://osamos-todo-list/./src/htmlManipulation.js?");
+
+/***/ }),
+
+/***/ "./src/page component/todoComponent.js":
+/*!*********************************************!*\
+  !*** ./src/page component/todoComponent.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createTodoComponent)\n/* harmony export */ });\n/* harmony import */ var _icons_add_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../icons/add.svg */ \"./src/icons/add.svg\");\n\nfunction createTodoComponent(){\n    const todosDiv = document.createElement(\"div\")\n    todosDiv.classList.add(\"todos-div\")\n    const addItemDiv = createAddItemDiv()\n    const items = createItems(\"sandra\")\n    //\n    todosDiv.appendChild(addItemDiv)\n    todosDiv.appendChild(items)\n    return todosDiv\n}\n\nfunction createAddItemDiv(){\n    const addItemDiv = document.createElement(\"div\")\n    addItemDiv.classList.add('addItemDiv')\n    const addItemImg = document.createElement(\"img\")\n    addItemImg.setAttribute(\"src\", _icons_add_svg__WEBPACK_IMPORTED_MODULE_0__)\n    const addItemText = document.createElement(\"span\")\n    addItemText.textContent = \"Add Item\"\n    addItemDiv.appendChild(addItemImg,addItemText)\n    addItemDiv.appendChild(addItemText)   \n    return addItemDiv\n}\n\nfunction createItems(title){\n    const itemsDiv = document.createElement(\"div\")\n    itemsDiv.classList.add(\"items-div\")\n    const itemTitle = document.querySelector(\"span\")\n    itemTitle.textContent = title\n    const itemPropsDiv = document.querySelector(\"div\")\n    itemPropsDiv.classList.add(\"itemsPropsDiv\")\n    itemPropsDiv.textContent = \"fdfghjk;l\"\n    //\n    itemsDiv.appendChild(itemTitle)\n    itemsDiv.appendChild(itemPropsDiv)\n    return itemsDiv\n}\n\n//# sourceURL=webpack://osamos-todo-list/./src/page_component/todoComponent.js?");
+
+/***/ }),
+
+/***/ "./src/icons/add.svg":
+/*!***************************!*\
+  !*** ./src/icons/add.svg ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"imgs/add.svg\";\n\n//# sourceURL=webpack://osamos-todo-list/./src/icons/add.svg?");
 
 /***/ })
 
@@ -171,6 +191,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -185,6 +217,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

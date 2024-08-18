@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log(\"jhcdfgio\")\n\n//# sourceURL=webpack://osamos-todo-list/./src/index.js?");
+eval("function storageAvailable(type) {\n    let storage;\n    try {\n      storage = window[type];\n      const x = \"__storage_test__\";\n      storage.setItem(x, x);\n      storage.removeItem(x);\n      return true;\n    } catch (e) {\n      return (\n        e instanceof DOMException &&\n        e.name === \"QuotaExceededError\" &&\n        // acknowledge QuotaExceededError only if there's something already stored\n        storage &&\n        storage.length !== 0\n      );\n    }\n  }\n\n  if (storageAvailable(\"localStorage\")) {\n    console.log(\"Yippee! We can use localStorage awesomeness\")\n  } else {\n    console.log(\"bsbjldbjbjwe;afvc ui;bave\")\n  }\n\n//# sourceURL=webpack://osamos-todo-list/./src/index.js?");
 
 /***/ })
 

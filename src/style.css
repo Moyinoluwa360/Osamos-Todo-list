@@ -122,3 +122,162 @@ img{
     width: 27px;
     box-shadow: 2px 2px 2px black;
 }
+/* main page header */
+#main-page{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 95%;
+}
+.main-page-header{
+    height: 10%;
+    background-color: rgb(214, 236, 255);
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.main-page-content{
+    margin: 0%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#todos-displayed{
+    height: 95%;
+}
+
+/* js components styling */
+
+.addItemDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 6%;
+    font-weight: bolder;
+}
+
+.addItemDiv img:hover{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px rgb(160, 255, 168);
+}
+.todos-div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.items-div{
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    border: 5px;
+    justify-content: space-between;
+}
+.items-div:first-child{
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/* dialogue 1 display */
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background with more opacity */
+    padding-top: 60px;
+}
+
+/* Modal content container */
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    animation: fadeIn 0.5s ease; /* Smooth fade-in animation */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Header styling */
+h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Label styling */
+label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Input and textarea styling */
+input[type="text"],
+textarea,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="date"]:focus {
+    border-color: #007BFF; /* Border color change on focus */
+    outline: none;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
