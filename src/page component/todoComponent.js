@@ -1,6 +1,9 @@
 import addImg from "../icons/add.svg"
 import editImg from "../icons/edit.svg"
 import deleteImg from "../icons/trash.svg"
+import createTodoObj from "../lowLevelComponents/todos"
+import * as ls from "../localStorage"
+import * as detailsBox from "../external functions/createDialogueBoxFunctions"
 
 export default function createTodoComponent(){
     const todosDiv = document.createElement("div")
@@ -13,7 +16,7 @@ export default function createTodoComponent(){
     //
     // event listener for the the image
     addItemImg.addEventListener("click",()=>{
-        todosDiv.appendChild(createItems("sandra"))
+        createDialog()
     })
     const addItemText = document.createElement("span")
     addItemText.textContent = "Add Item"
@@ -21,11 +24,20 @@ export default function createTodoComponent(){
     addItemDiv.appendChild(addItemText)
     //
     todosDiv.appendChild(addItemDiv)
+    // 
+    const lsMyDays = ls.getLocalStorage("myDay")
+    if (lsMyDays){
+        console.log(lsMyDays)
+        Object.values(lsMyDays).forEach(obj =>{
+        console.log(obj)
+        todosDiv.appendChild(createItems(obj.title))
+    })
+    }
+    //
     return todosDiv
 }
 
-    
-
+let myDay = {}
 function createItems(title){
     const itemsDiv = document.createElement("div")
     itemsDiv.classList.add("items-div")
@@ -39,6 +51,17 @@ function createItems(title){
     const itemPropsBotton = document.createElement("button")
     itemPropsBotton.classList.add("item-props-button")
     itemPropsBotton.textContent = "Details"
+    // add event listener to details button
+    itemPropsBotton.addEventListener("click",()=>{
+        const detailsObj = ls.getLocalStorage("myDay")[title]
+        detailsBox.createDetailsBox(
+            detailsObj.title,
+            detailsObj.description,
+            detailsObj.dueDate,
+            detailsObj.priority,
+            detailsObj.important
+          );
+    })
     itemPropsDiv.appendChild(itemPropsBotton)
     // edit icon
     const itemPropsEditIcon = document.createElement("img")
@@ -183,12 +206,23 @@ function createDialog() {
     form.onsubmit = function (e) {
         e.preventDefault(); // Prevent the form from submitting
         modal.style.display = 'none'; // Close the modal
-        console.log('Form Submitted:', {
-            title: titleInput.value,
-            description: descInput.value,
-            dueDate: dueDateInput.value,
-            priority: form.priority.value,
-            favourite: form.favourite.value
-        });
+        const title = titleInput.value
+        const description =descInput.value
+        const dueDate = dueDateInput.value
+        const priority = form.priority.value
+        const favourite =  form.favourite.value
+        handleDataSubmition(title,description,dueDate,priority,favourite)
     };
 }
+
+function handleDataSubmition(title,description,dueDate,priority,favourite){
+    if (Object.keys(myDay).length == 0){
+        myDay = {...ls.getLocalStorage("myDay")}
+        console.log(myDay)
+    }
+    const todoObj = new createTodoObj(title,description,dueDate,priority,favourite)
+    myDay[title] = todoObj
+    let lsMyDay = ls.populateLocalStorage("myDay", myDay)
+    document.querySelector(".todos-div").appendChild(createItems(lsMyDay[title].title))
+}
+
