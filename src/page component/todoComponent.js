@@ -5,7 +5,7 @@ import createTodoObj from "../lowLevelComponents/todos"
 import * as ls from "../localStorage"
 import * as detailsBox from "../external functions/createDialogueBoxFunctions"
 
-export default function createTodoComponent(){
+export default function createTodoComponent(pageObj){
     const todosDiv = document.createElement("div")
     todosDiv.classList.add("todos-div")
     //
@@ -16,7 +16,7 @@ export default function createTodoComponent(){
     //
     // event listener for the the image
     addItemImg.addEventListener("click",()=>{
-        detailsBox.createDialog(handleDataSubmition)
+        detailsBox.createDialog(handleDataSubmition,pageObj)
     })
     const addItemText = document.createElement("span")
     addItemText.textContent = "Add Item"
@@ -25,22 +25,24 @@ export default function createTodoComponent(){
     //
     todosDiv.appendChild(addItemDiv)
     // 
-    const lsMyDays = ls.getLocalStorage("myDay")
-    if (lsMyDays){
-        console.log(lsMyDays)
-        Object.values(lsMyDays).forEach(obj =>{
-        console.log(obj)
-        todosDiv.appendChild(createItems(obj.title))
+    const lsPageObj = ls.getLocalStorage(pageObj.name)
+    if (lsPageObj){
+        Object.values(lsPageObj).forEach(obj =>{
+            if (obj instanceof Object){
+                todosDiv.appendChild(createItems(pageObj,obj.title))
+            }       
     })
     }
     //
     return todosDiv
 }
-
-let myDay = {}
-function createItems(title){
+function createItems(pageObj,title){
     const itemsDiv = document.createElement("div")
-    itemsDiv.classList.add("items-div")
+    let titleClass = title
+    if (titleClass.includes("")){
+        titleClass = titleClass.split(" ").join("")
+    }
+    itemsDiv.classList.add("items-div", titleClass)
     //
     const itemTitle = document.createElement("span")
     itemTitle.textContent = title
@@ -53,7 +55,7 @@ function createItems(title){
     itemPropsBotton.textContent = "Details"
     // add event listener to details button
     itemPropsBotton.addEventListener("click",()=>{
-        const detailsObj = ls.getLocalStorage("myDay")[title]
+        const detailsObj = ls.getLocalStorage(pageObj.name)[title]
         detailsBox.createDetailsBox(
             detailsObj.title,
             detailsObj.description,
@@ -70,6 +72,16 @@ function createItems(title){
     // delete icon
     const itemPropsDeleteIcon = document.createElement("img")
     itemPropsDeleteIcon.setAttribute("src", deleteImg)
+    // add event listener to delete img
+    console.log(pageObj)
+    itemPropsDeleteIcon.addEventListener("click",()=>{
+        let lsPageObj = ls.getLocalStorage(pageObj.name)
+        console.log(lsPageObj)
+        delete lsPageObj[title]
+        console.log(lsPageObj)
+        ls.populateLocalStorage(pageObj.name,lsPageObj)
+        document.querySelector(".todos-div").removeChild(itemsDiv)
+    })
     itemPropsDiv.appendChild(itemPropsDeleteIcon)
 
 
@@ -92,14 +104,13 @@ function createItems(title){
     return itemsDiv
 }
 
-const handleDataSubmition = function handleDataSubmition(title,description,dueDate,priority,favourite){
-    if (Object.keys(myDay).length == 0){
-        myDay = {...ls.getLocalStorage("myDay")}
-        console.log(myDay)
-    }
+const handleDataSubmition = function handleDataSubmition(pageObj,title,description,dueDate,priority,favourite){
     const todoObj = new createTodoObj(title,description,dueDate,priority,favourite)
-    myDay[title] = todoObj
-    let lsMyDay = ls.populateLocalStorage("myDay", myDay)
-    document.querySelector(".todos-div").appendChild(createItems(lsMyDay[title].title))
+    if (Object.keys(pageObj).length == 1){
+        pageObj = {...pageObj,...ls.getLocalStorage(pageObj.name)}
+    }
+    pageObj[todoObj.title] = todoObj
+    let lsPageObj = ls.populateLocalStorage(pageObj.name, pageObj)
+    document.querySelector(".todos-div").appendChild(createItems(pageObj,lsPageObj[todoObj.title].title))
 }
 

@@ -52,7 +52,7 @@ export function createDetailsBox(title, description, dueDate, priority, favourit
     detailsBox.style.left = `${(windowWidth - detailsBoxWidth) / 2}px`;
   }
 
-export function createDialog(handleDataSubmition) {
+export function createDialog(handleDataSubmition,pageObj) {
   // Create the modal overlay
   const modal = document.createElement('div');
   modal.className = 'modal';
@@ -171,6 +171,6 @@ export function createDialog(handleDataSubmition) {
       const dueDate = dueDateInput.value
       const priority = form.priority.value
       const favourite =  form.favourite.value
-      handleDataSubmition(title,description,dueDate,priority,favourite)
+      handleDataSubmition(pageObj,title,description,dueDate,priority,favourite)
   };
 }

@@ -1,5 +1,4 @@
 import "./style.css"
-import component from "./page component/todoComponent"
 const makeCollasible = (function(){
     const specialBar = document.querySelectorAll(".special-bar")
     for ( let i = 0; i < specialBar.length; i++) {
@@ -14,9 +13,3 @@ const makeCollasible = (function(){
         });
       } 
 })()
-
-function renderComponent(element){
-    document.querySelector("#todos-displayed").appendChild(element)
-}
-
-renderComponent(component())
