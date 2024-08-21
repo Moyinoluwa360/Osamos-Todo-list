@@ -61,7 +61,7 @@ img{
     margin: 20px;
     margin-bottom: 10px;
     gap: 10px;
-    height:15%;
+    height:10%;
 }
 .account-details{
     display: flex;
@@ -102,8 +102,12 @@ img{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    gap:20px;
     background-color: rgb(233, 233, 233);
     display: none;
+    max-height: 90px;
+    overflow: auto;
+    border-radius: 5px;
 }
 .bar-container{
     display: flex;
@@ -116,6 +120,23 @@ img{
     gap: 5px;
     font-size: 15px;
     font-weight: bolder;
+    height: 25px;
+    padding: 5px;
+}
+.hiddenContentBar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: rgb(159, 185, 255);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.hiddenContentBar:hover{
+    background-color: rgb(138, 170, 255) ;
 }
 .addImg img:hover{
     height: 27px;

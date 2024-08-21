@@ -5,7 +5,9 @@ let myDay = {
 }
 export default function todayPage(){
     function renderComponent(element){
-        document.querySelector("#todos-displayed").appendChild(element)
+        const todosDisplayed = document.querySelector("#todos-displayed")
+        todosDisplayed.querySelectorAll('*').forEach(element => element.remove());
+        todosDisplayed.appendChild(element)
       }
     renderComponent(component(myDay))
 }

@@ -174,3 +174,62 @@ export function createDialog(handleDataSubmition,pageObj) {
       handleDataSubmition(pageObj,title,description,dueDate,priority,favourite)
   };
 }
+
+export function createProjectTitleDialog(handleSubmit) {
+  // Create the modal overlay
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+
+  // Create the modal content container
+  const modalContent = document.createElement('div');
+  modalContent.className = 'modal-content';
+
+  // Create and append the header
+  const header = document.createElement('h2');
+  header.textContent = 'Enter Project Name';
+  modalContent.appendChild(header);
+
+  // Create the form element
+  const form = document.createElement('form');
+
+  // Title input
+  const projectNameLabel = document.createElement('label');
+  projectNameLabel.textContent = 'Project Name';
+  form.appendChild(projectNameLabel);
+
+  const projectNameInput = document.createElement('input');
+  projectNameInput.type = 'text';
+  projectNameInput.name = 'title';
+  form.appendChild(projectNameInput);
+
+  form.appendChild(document.createElement('br'));
+
+  // Submit button
+  const submitButton = document.createElement('button');
+  submitButton.type = 'submit';
+  submitButton.textContent = 'Submit Item';
+  form.appendChild(submitButton);
+
+  // Append the form to the modal content
+  modalContent.appendChild(form);
+
+  // Append the modal content to the modal
+  modal.appendChild(modalContent);
+
+  // Append the modal to the body
+  document.body.appendChild(modal);
+
+  // Display the modal when the page loads
+  modal.style.display = 'block';
+  
+  // create an object for the project
+
+  // Close the modal on form submit (you can also add form submission logic here)
+  const projectObj = {}
+  form.onsubmit = function (e) {
+    e.preventDefault(); // Prevent the form from submitting
+    modal.style.display = 'none'; // Close the modal
+    projectObj["name"] = projectNameInput.value
+    handleSubmit(projectObj)
+  };
+}
