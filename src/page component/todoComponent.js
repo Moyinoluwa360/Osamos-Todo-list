@@ -38,11 +38,7 @@ export default function createTodoComponent(pageObj){
 }
 function createItems(pageObj,title){
     const itemsDiv = document.createElement("div")
-    let titleClass = title
-    if (titleClass.includes("")){
-        titleClass = titleClass.split(" ").join("")
-    }
-    itemsDiv.classList.add("items-div", titleClass)
+    itemsDiv.classList.add("items-div")
     //
     const itemTitle = document.createElement("span")
     itemTitle.textContent = title
