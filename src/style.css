@@ -212,9 +212,8 @@ img{
 }
 .itemsPropsDiv{
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
-    width: 20%;
     margin-left: 70%;
 }
 .item-props-button{

@@ -4,8 +4,11 @@ import deleteImg from "../icons/trash.svg"
 import createTodoObj from "../lowLevelComponents/todos"
 import * as ls from "../localStorage"
 import * as detailsBox from "../external functions/createDialogueBoxFunctions"
+import {mapKeys} from "lodash"
 
 export default function createTodoComponent(pageObj){
+    lsKeyName = pageObj.name
+    console.log(lsKeyName)
     const todosDiv = document.createElement("div")
     todosDiv.classList.add("todos-div")
     //
@@ -36,9 +39,16 @@ export default function createTodoComponent(pageObj){
     //
     return todosDiv
 }
+let lsKeyName = ""
+let lsPairTitle = ""
+
 function createItems(pageObj,title){
     const itemsDiv = document.createElement("div")
     itemsDiv.classList.add("items-div")
+    let itemsDivTitle = title
+    if (itemsDivTitle.includes(" ")){
+        itemsDivTitle = itemsDivTitle.split(" ").join("")
+    } 
     //
     const itemTitle = document.createElement("span")
     itemTitle.textContent = title
@@ -51,7 +61,11 @@ function createItems(pageObj,title){
     itemPropsBotton.textContent = "Details"
     // add event listener to details button
     itemPropsBotton.addEventListener("click",()=>{
-        const detailsObj = ls.getLocalStorage(pageObj.name)[title]
+        let detailsObj;
+        detailsObj = ls.getLocalStorage(pageObj.name)[title]
+        if(detailsObj == null){
+            detailsObj = ls.getLocalStorage(lsKeyName)[lsPairTitle]
+        }
         detailsBox.createDetailsBox(
             detailsObj.title,
             detailsObj.description,
@@ -61,9 +75,17 @@ function createItems(pageObj,title){
           );
     })
     itemPropsDiv.appendChild(itemPropsBotton)
+    //due date
+    const itemDueDate = document.createElement("span")
+    itemDueDate.textContent = ls.getLocalStorage(pageObj.name)[title].dueDate
+    itemPropsDiv.appendChild(itemDueDate)
     // edit icon
     const itemPropsEditIcon = document.createElement("img")
     itemPropsEditIcon.setAttribute("src",editImg)
+    //add event listener for editImg
+    itemPropsEditIcon.addEventListener("click",()=>{
+        detailsBox.editItemDialog(handleEditDataSubmition,itemsDivTitle,itemTitle,itemDueDate)
+    })
     itemPropsDiv.appendChild(itemPropsEditIcon)
     // delete icon
     const itemPropsDeleteIcon = document.createElement("img")
@@ -110,3 +132,19 @@ const handleDataSubmition = function handleDataSubmition(pageObj,title,descripti
     document.querySelector(".todos-div").appendChild(createItems(pageObj,lsPageObj[todoObj.title].title))
 }
 
+const handleEditDataSubmition = function (itemsDivTitle,title,description,dueDate,priority,favourite,itemTitle,itemDueDate){
+    const todoObj = new createTodoObj(title,description,dueDate,priority,favourite)
+    const lsItemDetailsObj = ls.getLocalStorage(lsKeyName)
+    lsItemDetailsObj[itemsDivTitle] = todoObj
+    const newLsItemDetailsObj = mapKeys(lsItemDetailsObj, (value, key) => {
+        if (key === itemsDivTitle) {
+          return title;
+        }
+        return key; // return the original key name for all other keys
+      });
+    ls.populateLocalStorage(lsKeyName, newLsItemDetailsObj)
+    lsPairTitle = title
+    // editing item div
+    itemTitle.textContent = title
+    itemDueDate.textContent = dueDate
+}
